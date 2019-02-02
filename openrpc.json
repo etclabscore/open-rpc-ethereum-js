@@ -1,225 +1,226 @@
 {
-  "openrpc": "1.0.0",
-  "info": {
-    "version": "1.0.0",
-    "title": "Ether RPC",
-    "description": "The etclabs brings you... generated RPC!",
-    "contact": {
-      "name": "etclabs core"
-    },
-    "license": {
-      "name": "Apache 2.0",
-      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  },
-  "servers": [
-    {
-      "url": "http://localhost:8080"
-    }
-  ],
-  "methods": [
-    {
-      "name": "eth_getBlockByHash",
-      "summary": "Gets a block for a given hash",
-      "parameters": [
-        {
-          "name": "blockHash",
-          "description": "the block hash",
-          "required": true,
-          "schema": {
-            "$ref": "#/components/schemas/BlockHash"
-          }
-        },
-        {
-          "name": "includeTransactions",
-          "description": "If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.",
-          "required": true,
-          "schema": {
-            "type": "boolean"
-          }
-        }
-      ],
-      "results": {
-        "name": "block",
-        "description": "A block",
-        "schema": {
-          "$ref": "#/components/schemas/Block"
-        }
-      }
-    },
-  ],
-  "components": {
-    "schemas": {
-      "BlockHash": {
-        "type": "string"
-      },
-      "Block": {
-        "type": "object",
-        "properties": {
-          "number": {
-            "description": "the block number or null when its the pending block",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "hash": {
-            "description": "the block hash or null when its the pending block",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "parentHash": {
-            "description": "hash of the parent block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "nonce": {
-            "description": "hash of the generated proof-of-work or null when its the pending block",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "sha3Uncles": {
-            "description": "SHA3 of the uncles data in the block",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "logsBloom": {
-            "description": "the bloom filter for the logs of the block or null when its the pending block",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "transactionsRoot": {
-            "description": "the root of the transaction trie of the block.",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "stateRoot": {
-            "description": "the root of the final state trie of the block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "receiptsRoot": {
-            "description": "the root of the receipts trie of the block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "miner": {
-            "description": "the address of the beneficiary to whom the mining rewards were given",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "difficulty": {
-            "description": "integer of the difficulty for this block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "totalDifficulty": {
-            "description": "integer of the total difficulty of the chain until this block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "extraData": {
-            "description": "the 'extra data' field of this block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "size": {
-            "description": "integer the size of this block in bytes",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "gasLimit": {
-            "description": "the maximum gas allowed in this block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "gasUsed": {
-            "description": "the total used gas by all transactions in this block",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "timestamp": {
-            "description": "the unix timestamp for when the block was collated",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "transactions": {
-            "description": "Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter",
-            "type": "array",
-            "items": {
-              "oneOf": [
-                { "$ref": "#/components/schemas/Transaction" },
-                { "$ref": "#/components/schemas/Hash" }
-              ]
-            }
-          },
-          "uncles": {
-            "description": "Array of uncle hashes",
-            "type": "array",
-            "items": {
-              "description": "block hash of the uncle block",
-              "$ref": "#/components/schemas/Hash"
-            }
-          },
-        }
-      },
-      "Transaction": {
-        "type": "object",
-        "properties": {
-          "blockHash": {
-            "description": "hash of the block where this transaction was in. null when its pending",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "blockNumber": {
-            "description": "block number where this transaction was in. null when its pending",
-            "$ref": "#/components/schemas/HashOrPending"
-          },
-          "from": {
-            "description": "address of the sender",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "gas": {
-            "description": "gas provided by the sender",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "gasPrice": {
-            "description": "gas price provided by the sender in Wei",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "hash": {
-            "description": "hash of the transaction",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "input": {
-            "description": "the data send along with the transaction",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "nonce": {
-            "description": "the number of transactions made by the sender prior to this one",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "to": {
-            "description": "address of the receiver. null when its a contract creation transaction",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "transactionIndex": {
-            "description": "integer of the transaction's index position in the block. null when its pending",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "value": {
-            "description": "value transferred in Wei",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "v": {
-            "description": "ECDSA recovery id",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "r": {
-            "description": "ECDSA signature r",
-            "$ref": "#/components/schemas/Hash"
-          },
-          "s": {
-            "description": "ECDSA signature s",
-            "$ref": "#/components/schemas/Hash"
-          },
-        }
-      },
-      "HashOrPending": {
-        "oneOf": [
-          { "$ref": "#/components/schemas/Hash" },
-          { "$ref": "#/components/schemas/PendingBlock" }
-        ]
-      },
-      "Hash": {
-        "type": "string",
-        "description": "Hex representation of a number or byte array",
-        "pattern": "^0x[a-fA-F\\d]+$"
-      },
-      "PendingBlock": {
-        "type": "null",
-        "description": "If null, the block is the 'pending' block"
-      }
-    }
-  }
+	"openrpc": "1.0.0",
+	"info": {
+		"version": "1.0.0",
+		"title": "Ether RPC",
+		"description": "The etclabs brings you... generated RPC!",
+		"contact": {
+			"name": "etclabs core"
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+		}
+	},
+	"servers": [{
+		"url": "http://localhost:8080"
+	}],
+	"methods": [{
+		"name": "eth_getBlockByHash",
+		"summary": "Gets a block for a given hash",
+		"parameters": [{
+				"name": "blockHash",
+				"description": "the block hash",
+				"required": true,
+				"schema": {
+					"$ref": "#/components/schemas/BlockHash"
+				}
+			},
+			{
+				"name": "includeTransactions",
+				"description": "If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.",
+				"required": true,
+				"schema": {
+					"type": "boolean"
+				}
+			}
+		],
+		"results": {
+			"name": "block",
+			"description": "A block",
+			"schema": {
+				"$ref": "#/components/schemas/Block"
+			}
+		}
+	}],
+	"components": {
+		"schemas": {
+			"BlockHash": {
+				"type": "string"
+			},
+			"Block": {
+				"type": "object",
+				"properties": {
+					"number": {
+						"description": "the block number or null when its the pending block",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"hash": {
+						"description": "the block hash or null when its the pending block",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"parentHash": {
+						"description": "hash of the parent block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"nonce": {
+						"description": "hash of the generated proof-of-work or null when its the pending block",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"sha3Uncles": {
+						"description": "SHA3 of the uncles data in the block",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"logsBloom": {
+						"description": "the bloom filter for the logs of the block or null when its the pending block",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"transactionsRoot": {
+						"description": "the root of the transaction trie of the block.",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"stateRoot": {
+						"description": "the root of the final state trie of the block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"receiptsRoot": {
+						"description": "the root of the receipts trie of the block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"miner": {
+						"description": "the address of the beneficiary to whom the mining rewards were given",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"difficulty": {
+						"description": "integer of the difficulty for this block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"totalDifficulty": {
+						"description": "integer of the total difficulty of the chain until this block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"extraData": {
+						"description": "the 'extra data' field of this block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"size": {
+						"description": "integer the size of this block in bytes",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"gasLimit": {
+						"description": "the maximum gas allowed in this block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"gasUsed": {
+						"description": "the total used gas by all transactions in this block",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"timestamp": {
+						"description": "the unix timestamp for when the block was collated",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"transactions": {
+						"description": "Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter",
+						"type": "array",
+						"items": {
+							"oneOf": [{
+									"$ref": "#/components/schemas/Transaction"
+								},
+								{
+									"$ref": "#/components/schemas/Hash"
+								}
+							]
+						}
+					},
+					"uncles": {
+						"description": "Array of uncle hashes",
+						"type": "array",
+						"items": {
+							"description": "block hash of the uncle block",
+							"$ref": "#/components/schemas/Hash"
+						}
+					}
+				}
+			},
+			"Transaction": {
+				"type": "object",
+				"properties": {
+					"blockHash": {
+						"description": "hash of the block where this transaction was in. null when its pending",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"blockNumber": {
+						"description": "block number where this transaction was in. null when its pending",
+						"$ref": "#/components/schemas/HashOrPending"
+					},
+					"from": {
+						"description": "address of the sender",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"gas": {
+						"description": "gas provided by the sender",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"gasPrice": {
+						"description": "gas price provided by the sender in Wei",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"hash": {
+						"description": "hash of the transaction",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"input": {
+						"description": "the data send along with the transaction",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"nonce": {
+						"description": "the number of transactions made by the sender prior to this one",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"to": {
+						"description": "address of the receiver. null when its a contract creation transaction",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"transactionIndex": {
+						"description": "integer of the transaction's index position in the block. null when its pending",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"value": {
+						"description": "value transferred in Wei",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"v": {
+						"description": "ECDSA recovery id",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"r": {
+						"description": "ECDSA signature r",
+						"$ref": "#/components/schemas/Hash"
+					},
+					"s": {
+						"description": "ECDSA signature s",
+						"$ref": "#/components/schemas/Hash"
+					}
+				}
+			},
+			"HashOrPending": {
+				"oneOf": [{
+						"$ref": "#/components/schemas/Hash"
+					},
+					{
+						"$ref": "#/components/schemas/PendingBlock"
+					}
+				]
+			},
+			"Hash": {
+				"type": "string",
+				"description": "Hex representation of a number or byte array",
+				"pattern": "^0x[a-fA-F\\d]+$"
+			},
+			"PendingBlock": {
+				"type": "null",
+				"description": "If null, the block is the 'pending' block"
+			}
+		}
+	}
 }
