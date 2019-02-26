@@ -307,7 +307,7 @@
       "result": {
         "schema": {
           "type": "array",
-          "item": {
+          "items": {
             "$ref": "#/components/schemas/Log"
           }
         }
@@ -328,7 +328,7 @@
       "result": {
         "schema": {
           "type": "array",
-          "item": {
+          "items": {
             "$ref": "#/components/schemas/Log"
           }
         }
@@ -345,7 +345,7 @@
       "result": {
         "schema": {
           "type": "array",
-          "item": {
+          "items": {
             "$ref": "#/components/schemas/Log"
           }
         }
@@ -549,7 +549,7 @@
         "schema": {
           "description": "An array of addresses owned by the client",
           "type": "array",
-          "item": {
+          "items": {
             "$ref": "#/components/schemas/Address"
           }
         }
@@ -793,7 +793,7 @@
         "schema": {
           "type": "array",
           "description": "Array of available compilers.",
-          "item": {
+          "items": {
             "description": "Name of an available compiler",
             "type": "string"
           }
@@ -910,7 +910,7 @@
       "StorageProof": {
         "type": "array",
         "description": "Current block header PoW hash.",
-        "item": {
+        "items": {
           "type": "object",
           "description": "Object proving a relationship of a storage value to an account's storageHash.",
           "properties": {
@@ -931,7 +931,7 @@
       "ProofNodes": {
         "type": "array",
         "description": "The set of node values needed to traverse a patricia merkle tree (from root to leaf) to retrieve a value",
-        "item": {
+        "items": {
           "$ref": "#/components/schemas/ProofNode"
         }
       },
@@ -1018,7 +1018,7 @@
           "logs": {
             "type": "array",
             "description": "An array of all the logs triggered during the transaction",
-            "item": {
+            "items": {
               "$ref": "#/components/schemas/Log"
             }
           },
@@ -1085,7 +1085,7 @@
           },
           "topics": {
             "type": "array",
-            "item": {
+            "items": {
               "topic": {
                 "description": "32 Bytes DATA of indexed log arguments. (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256))",
                 "$ref": "#/components/schemas/DataWord"
@@ -1485,7 +1485,7 @@
                 {
                   "type": "array",
                   "description": "List of contract addresses from which to monitor events",
-                  "item": {
+                  "items": {
                     "$ref": "#/components/schemas/Address"
                   }
                 }
@@ -1494,7 +1494,7 @@
             "topics": {
               "type": "array",
               "description": "Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with 'or' options",
-              "item": {
+              "items": {
                 "description": "Indexable 32 bytes piece of data (made from the event's function signature in solidity)",
                 "$ref": "#/components/schemas/DataWord"
               }
