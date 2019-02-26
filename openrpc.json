@@ -1042,10 +1042,8 @@
             "$ref": "#/components/schemas/Keccak"
           },
           "status": {
-            "schema": {
-              "description": "Whether or not the transaction threw an error.",
-              "type": "boolean"
-            }
+            "description": "Whether or not the transaction threw an error.",
+            "type": "boolean"
           }
         }
       },
