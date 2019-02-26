@@ -986,9 +986,7 @@
           "logsBloom",
           "to",
           "transactionHash",
-          "transactionIndex",
-          "postTransactionState",
-          "status"
+          "transactionIndex"
         ],
         "properties": {
           "blockHash": {
