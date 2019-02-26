@@ -578,17 +578,6 @@
       }
     },
     {
-      "name": "eth_hashrate",
-      "summary": "Returns the number of hashes per second that the node is mining with.",
-      "params": [],
-      "result": {
-        "schema": {
-          "description": "Integer of the number of hashes per second",
-          "$ref": "#/components/schemas/Integer"
-        }
-      }
-    },
-    {
       "name": "eth_mining",
       "summary": "Returns true if client is actively mining new blocks.",
       "params": [],
