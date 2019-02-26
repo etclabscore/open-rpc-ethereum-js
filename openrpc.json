@@ -969,122 +969,81 @@
 				"enum": ["earliest", "latest", "pending"]
 			},
 			"Receipt": {
-				"oneOf": [
-					{
-						"type": "object",
-						"description": "The receipt of a transaction",
-						"properties": {
-							"blockHash": {
-								"description": "BlockHash of the block in which the transaction was mined",
-								"$ref": "#/components/schemas/BlockHash"
-							},
-							"blockNumber": {
-								"description": "BlockNumber of the block in which the transaction was mined",
-								"$ref": "#/components/schemas/BlockNumber"
-							},
-							"contractAddress": {
-								"description": "The contract address created, if the transaction was a contract creation, otherwise null",
-								"$ref": "#/components/schemas/Address"
-							},
-							"cumulativeGasUsed": {
-								"description": "The gas units used by the transaction",
-								"$ref": "#/components/schemas/Integer"
-							},
-							"from": {
-								"description": "The sender of the transaction",
-								"$ref": "#/components/schemas/Address"
-							},
-							"gasUsed": {
-								"description": "The total gas used by the transaction",
-								"$ref": "#/components/schemas/Integer"
-							},
-							"logs": {
-								"type": "array",
-								"description": "An array of all the logs triggered during the transaction",
-								"item": {
-									"$ref": "#/components/schemas/Log"
-								}
-							},
-							"logsBloom": {
-								"$ref": "#/components/schemas/BloomFilter"
-							},
-							"to": {
-								"description": "Destination address of the transaction",
-								"$ref": "#/components/schemas/Address"
-							},
-							"transactionHash": {
-								"description": "Keccak 256 of the transaction",
-								"$ref": "#/components/schemas/Keccak"
-							},
-							"transactionIndex": {
-								"description": "An array of all the logs triggered during the transaction",
-								"$ref": "#/components/schemas/BloomFilter"
-							},
-							"postTransactionState": {
-								"description": "The intermediate stateRoot directly after transaction execution.",
-								"$ref": "#/components/schemas/Keccak"
-							}
+				"type": "object",
+				"description": "The receipt of a transaction",
+				"required": [
+					"blockHash",
+					"blockNumber",
+					"contractAddress",
+					"cumulativeGasUsed",
+					"from",
+					"gasUsed",
+					"logs",
+					"logsBloom",
+					"to",
+					"transactionHash",
+					"transactionIndex",
+					"postTransactionState",
+					"status"
+				],
+				"properties": {
+					"blockHash": {
+						"description": "BlockHash of the block in which the transaction was mined",
+						"$ref": "#/components/schemas/BlockHash"
+					},
+					"blockNumber": {
+						"description": "BlockNumber of the block in which the transaction was mined",
+						"$ref": "#/components/schemas/BlockNumber"
+					},
+					"contractAddress": {
+						"description": "The contract address created, if the transaction was a contract creation, otherwise null",
+						"$ref": "#/components/schemas/Address"
+					},
+					"cumulativeGasUsed": {
+						"description": "The gas units used by the transaction",
+						"$ref": "#/components/schemas/Integer"
+					},
+					"from": {
+						"description": "The sender of the transaction",
+						"$ref": "#/components/schemas/Address"
+					},
+					"gasUsed": {
+						"description": "The total gas used by the transaction",
+						"$ref": "#/components/schemas/Integer"
+					},
+					"logs": {
+						"type": "array",
+						"description": "An array of all the logs triggered during the transaction",
+						"item": {
+							"$ref": "#/components/schemas/Log"
 						}
 					},
-					{
-						"type": "object",
-						"description": "The receipt of a transaction",
-						"properties": {
-							"blockHash": {
-								"description": "BlockHash of the block in which the transaction was mined",
-								"$ref": "#/components/schemas/BlockHash"
-							},
-							"blockNumber": {
-								"description": "BlockNumber of the block in which the transaction was mined",
-								"$ref": "#/components/schemas/BlockNumber"
-							},
-							"contractAddress": {
-								"description": "The contract address created, if the transaction was a contract creation, otherwise null",
-								"$ref": "#/components/schemas/Address"
-							},
-							"cumulativeGasUsed": {
-								"description": "The gas units used by the transaction",
-								"$ref": "#/components/schemas/Integer"
-							},
-							"from": {
-								"description": "The sender of the transaction",
-								"$ref": "#/components/schemas/Address"
-							},
-							"gasUsed": {
-								"description": "The total gas used by the transaction",
-								"$ref": "#/components/schemas/Integer"
-							},
-							"logs": {
-								"type": "array",
-								"description": "An array of all the logs triggered during the transaction",
-								"item": {
-									"$ref": "#/components/schemas/Log"
-								}
-							},
-							"logsBloom": {
-								"$ref": "#/components/schemas/BloomFilter"
-							},
-							"to": {
-								"description": "Destination address of the transaction",
-								"$ref": "#/components/schemas/Address"
-							},
-							"transactionHash": {
-								"description": "Keccak 256 of the transaction",
-								"$ref": "#/components/schemas/Keccak"
-							},
-							"transactionIndex": {
-								"description": "An array of all the logs triggered during the transaction",
-								"$ref": "#/components/schemas/BloomFilter"
-							},
-							"status": {
-								"schema": {
-									"description": "Whether or not the transaction threw an error.",
-									"type": "boolean"
-								}
-							}
+					"logsBloom": {
+						"$ref": "#/components/schemas/BloomFilter"
+					},
+					"to": {
+						"description": "Destination address of the transaction",
+						"$ref": "#/components/schemas/Address"
+					},
+					"transactionHash": {
+						"description": "Keccak 256 of the transaction",
+						"$ref": "#/components/schemas/Keccak"
+					},
+					"transactionIndex": {
+						"description": "An array of all the logs triggered during the transaction",
+						"$ref": "#/components/schemas/BloomFilter"
+					},
+					"postTransactionState": {
+						"description": "The intermediate stateRoot directly after transaction execution.",
+						"$ref": "#/components/schemas/Keccak"
+					},
+					"status": {
+						"schema": {
+							"description": "Whether or not the transaction threw an error.",
+							"type": "boolean"
 						}
 					}
-				]
+				}
 			},
 			"BloomFilter":{
 				"type": "string",
