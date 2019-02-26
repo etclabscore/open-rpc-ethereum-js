@@ -864,7 +864,7 @@
   "components": {
     "schemas": {
       "CodeResponse": {
-        "description": "An object contianing information about the code.",
+        "description": "An object containing information about the code.",
         "type": "object",
         "properties": {
           "code": {
