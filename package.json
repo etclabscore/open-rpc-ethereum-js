@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "regenerate": "open-rpc-generator-client-js EthereumRPC"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@open-rpc/generator-client-js": "^1.0.23",
     "jayson": "^2.1.1",
     "node-fetch": "^2.3.0"
   },
