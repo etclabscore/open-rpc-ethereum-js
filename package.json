@@ -1,21 +1,22 @@
 {
-  "name": "template-client",
+  "name": "open-rpc-ethereum",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/EthereumRPC.js",
   "scripts": {
     "build": "tsc",
-    "regenerate": "open-rpc-generator-client-js EthereumRPC"
+    "publish": "npm publish --access=public"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@open-rpc/generator-client-js": "^1.0.23",
+    "djv": "^2.1.1",
     "jayson": "^2.1.1",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
-    "typescript": "^3.2.4",
-    "@types/node-fetch": "^2.1.4"
+    "@open-rpc/generator-client": "^1.0.24",
+    "@types/node-fetch": "^2.1.4",
+    "typescript": "^3.2.4"
   }
 }
