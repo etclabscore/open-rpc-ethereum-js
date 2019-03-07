@@ -6,6 +6,6 @@
     "target": "es6",
     "noImplicitAny": false,
     "sourceMap": true,
-    "outDir": "dist"
+    "outDir": "build"
   }
 }

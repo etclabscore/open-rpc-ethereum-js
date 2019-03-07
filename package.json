@@ -1,22 +1,21 @@
 {
-  "name": "open-rpc-ethereum",
+  "name": "@etclabscore/multi-geth-rpc",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/EthereumRPC.js",
+  "main": "build/index.js",
   "scripts": {
-    "build": "tsc",
-    "publish": "npm publish --access=public"
+    "build": "tsc && typedoc --out docs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "djv": "^2.1.1",
     "jayson": "^2.1.1",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "typedoc": "^0.14.2"
   },
   "devDependencies": {
-    "@open-rpc/generator-client": "^1.0.24",
-    "@types/node-fetch": "^2.1.4",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "@types/node-fetch": "^2.1.4"
   }
 }
