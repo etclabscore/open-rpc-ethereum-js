@@ -1,21 +1,29 @@
 {
-  "name": "@etclabscore/multi-geth-rpc",
+  "name": "template-client",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc && typedoc --out docs"
+    "build": "tsc && typedoc --out docs",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "publish": "npm publish --access=public"
   },
+  "files": [
+    "build/*"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "djv": "^2.1.1",
-    "jayson": "^2.1.1",
-    "node-fetch": "^2.3.0",
-    "typedoc": "^0.14.2"
+    "@open-rpc/schema-utils-js": "1.0.3",
+    "json-schema": "^0.2.3",
+    "ajv": "^6.10.0",
+    "jayson": "^2.1.2",
+    "lodash": "4.17.11"
   },
   "devDependencies": {
     "typescript": "^3.2.4",
-    "@types/node-fetch": "^2.1.4"
+    "@types/json-schema": "7.0.3",
+    "tslint": "^5.13.1",
+    "typedoc": "^0.14.2"
   }
 }
