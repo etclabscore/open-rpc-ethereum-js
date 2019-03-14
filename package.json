@@ -1,5 +1,5 @@
 {
-  "name": "template-client",
+  "name": "@multi-geth/rpc-client",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
