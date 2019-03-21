@@ -1,11 +1,11 @@
 {
-  "name": "@multi-geth/rpc-client",
+  "name": "template-client",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
   "scripts": {
     "build": "tsc && typedoc --out docs",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint": "tslint --fix -c tslint.json 'index.ts'",
     "publish": "npm publish --access=public"
   },
   "files": [

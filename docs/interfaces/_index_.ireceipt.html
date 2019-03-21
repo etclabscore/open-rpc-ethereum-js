@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ITransaction | template-client</title>
+	<title>IReceipt | template-client</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -59,27 +59,39 @@
 					<a href="../modules/_index_.html">&quot;index&quot;</a>
 				</li>
 				<li>
-					<a href="_index_.itransaction.html">ITransaction</a>
+					<a href="_index_.ireceipt.html">IReceipt</a>
 				</li>
 			</ul>
-			<h1>Interface ITransaction</h1>
+			<h1>Interface IReceipt</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The receipt of a transaction</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ITransaction</span>
+						<span class="target">IReceipt</span>
 					</li>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-external-module">
 				<h3 class="tsd-before-signature">Indexable</h3>
 				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>k: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The receipt of a transaction</p>
+					</div>
+				</div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
@@ -88,13 +100,19 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#data" class="tsd-kind-icon">data</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#from" class="tsd-kind-icon">from</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#gas" class="tsd-kind-icon">gas</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#gasprice" class="tsd-kind-icon">gas<wbr>Price</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#nonce" class="tsd-kind-icon">nonce</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#to" class="tsd-kind-icon">to</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.itransaction.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#blockhash" class="tsd-kind-icon">block<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#blocknumber" class="tsd-kind-icon">block<wbr>Number</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#contractaddress" class="tsd-kind-icon">contract<wbr>Address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#cumulativegasused" class="tsd-kind-icon">cumulative<wbr>Gas<wbr>Used</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#from" class="tsd-kind-icon">from</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#gasused" class="tsd-kind-icon">gas<wbr>Used</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#logs" class="tsd-kind-icon">logs</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#logsbloom" class="tsd-kind-icon">logs<wbr>Bloom</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#posttransactionstate" class="tsd-kind-icon">post<wbr>Transaction<wbr>State</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#status" class="tsd-kind-icon">status</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#to" class="tsd-kind-icon">to</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#transactionhash" class="tsd-kind-icon">transaction<wbr>Hash</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_index_.ireceipt.html#transactionindex" class="tsd-kind-icon">transaction<wbr>Index</a></li>
 							</ul>
 						</section>
 					</div>
@@ -103,107 +121,197 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="data" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> data</h3>
-					<div class="tsd-signature tsd-kind-icon">data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="blockhash" class="tsd-anchor"></a>
+					<h3>block<wbr>Hash</h3>
+					<div class="tsd-signature tsd-kind-icon">block<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:198</li>
+							<li>Defined in index.ts:216</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The compiled code of a contract OR the hash of the invoked method signature and encoded parameters. For details see Ethereum Contract ABI.</p>
+							<p>BlockHash of the block in which the transaction was mined</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="blocknumber" class="tsd-anchor"></a>
+					<h3>block<wbr>Number</h3>
+					<div class="tsd-signature tsd-kind-icon">block<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.ts:220</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>BlockNumber of the block in which the transaction was mined</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="contractaddress" class="tsd-anchor"></a>
+					<h3>contract<wbr>Address</h3>
+					<div class="tsd-signature tsd-kind-icon">contract<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.ts:224</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The contract address created, if the transaction was a contract creation, otherwise null</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="cumulativegasused" class="tsd-anchor"></a>
+					<h3>cumulative<wbr>Gas<wbr>Used</h3>
+					<div class="tsd-signature tsd-kind-icon">cumulative<wbr>Gas<wbr>Used<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.ts:228</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The gas units used by the transaction</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="from" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> from</h3>
-					<div class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<h3>from</h3>
+					<div class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:178</li>
+							<li>Defined in index.ts:232</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Address of the sender</p>
+							<p>The sender of the transaction</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="gas" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gas</h3>
-					<div class="tsd-signature tsd-kind-icon">gas<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="gasused" class="tsd-anchor"></a>
+					<h3>gas<wbr>Used</h3>
+					<div class="tsd-signature tsd-kind-icon">gas<wbr>Used<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:186</li>
+							<li>Defined in index.ts:236</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The gas limit provided by the sender in Wei. default 90000</p>
+							<p>The total gas used by the transaction</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="gasprice" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> gas<wbr>Price</h3>
-					<div class="tsd-signature tsd-kind-icon">gas<wbr>Price<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="logs" class="tsd-anchor"></a>
+					<h3>logs</h3>
+					<div class="tsd-signature tsd-kind-icon">logs<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:190</li>
+							<li>Defined in index.ts:240</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The gas price willing to be paid by the sender in Wei</p>
+							<p>An array of all the logs triggered during the transaction</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="nonce" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> nonce</h3>
-					<div class="tsd-signature tsd-kind-icon">nonce<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="logsbloom" class="tsd-anchor"></a>
+					<h3>logs<wbr>Bloom</h3>
+					<div class="tsd-signature tsd-kind-icon">logs<wbr>Bloom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:202</li>
+							<li>Defined in index.ts:280</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The total number of prior transactions made by the sender.</p>
+							<p>A 2048 bit bloom filter from the logs of the transaction. Each log sets 3 bits though taking the low-order 11 bits of each of the first three pairs of bytes in a Keccak 256 hash of the log&#39;s byte series</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="posttransactionstate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> post<wbr>Transaction<wbr>State</h3>
+					<div class="tsd-signature tsd-kind-icon">post<wbr>Transaction<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.ts:296</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The intermediate stateRoot directly after transaction execution.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="status" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> status</h3>
+					<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.ts:300</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not the transaction threw an error.</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="to" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> to</h3>
-					<div class="tsd-signature tsd-kind-icon">to<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<h3>to</h3>
+					<div class="tsd-signature tsd-kind-icon">to<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:182</li>
+							<li>Defined in index.ts:284</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>address of the receiver. optional if it&#39;s a contract creation transaction</p>
+							<p>Destination address of the transaction</p>
 						</div>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="value" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> value</h3>
-					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="transactionhash" class="tsd-anchor"></a>
+					<h3>transaction<wbr>Hash</h3>
+					<div class="tsd-signature tsd-kind-icon">transaction<wbr>Hash<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in index.ts:194</li>
+							<li>Defined in index.ts:288</li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Value of Ether being transferred in Wei</p>
+							<p>Keccak 256 of the transaction</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="transactionindex" class="tsd-anchor"></a>
+					<h3>transaction<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">transaction<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in index.ts:292</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An array of all the logs triggered during the transaction</p>
 						</div>
 					</div>
 				</section>
@@ -225,28 +333,46 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_index_.itransaction.html" class="tsd-kind-icon">ITransaction</a>
+						<a href="_index_.ireceipt.html" class="tsd-kind-icon">IReceipt</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#data" class="tsd-kind-icon">data</a>
+								<a href="_index_.ireceipt.html#blockhash" class="tsd-kind-icon">block<wbr>Hash</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#from" class="tsd-kind-icon">from</a>
+								<a href="_index_.ireceipt.html#blocknumber" class="tsd-kind-icon">block<wbr>Number</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#gas" class="tsd-kind-icon">gas</a>
+								<a href="_index_.ireceipt.html#contractaddress" class="tsd-kind-icon">contract<wbr>Address</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#gasprice" class="tsd-kind-icon">gas<wbr>Price</a>
+								<a href="_index_.ireceipt.html#cumulativegasused" class="tsd-kind-icon">cumulative<wbr>Gas<wbr>Used</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#nonce" class="tsd-kind-icon">nonce</a>
+								<a href="_index_.ireceipt.html#from" class="tsd-kind-icon">from</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#to" class="tsd-kind-icon">to</a>
+								<a href="_index_.ireceipt.html#gasused" class="tsd-kind-icon">gas<wbr>Used</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_index_.itransaction.html#value" class="tsd-kind-icon">value</a>
+								<a href="_index_.ireceipt.html#logs" class="tsd-kind-icon">logs</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ireceipt.html#logsbloom" class="tsd-kind-icon">logs<wbr>Bloom</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ireceipt.html#posttransactionstate" class="tsd-kind-icon">post<wbr>Transaction<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ireceipt.html#status" class="tsd-kind-icon">status</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ireceipt.html#to" class="tsd-kind-icon">to</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ireceipt.html#transactionhash" class="tsd-kind-icon">transaction<wbr>Hash</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_index_.ireceipt.html#transactionindex" class="tsd-kind-icon">transaction<wbr>Index</a>
 							</li>
 						</ul>
 					</li>
